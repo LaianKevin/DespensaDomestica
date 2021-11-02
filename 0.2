@@ -1,0 +1,125 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void telaSobre (void);
+void telaPrincipal (void);
+void telaCliente (void);
+void telaCadastroCliente(void);
+void telaBuscaCliente(void);
+void telaAtualizaCliente(void);
+void telaApagaCliente(void);
+
+int main (void) {
+  telaSobre ();
+  telaPrincipal ();
+  telaCliente();
+  telaCadastroCliente();
+  telaBuscaCliente();
+  telaAtualizaCliente();
+  telaApagaCliente();
+  return 0;
+}
+
+void telaSobre (void) {
+    system("clear||cls");
+    printf("\n");
+    printf ("\n");
+    printf ("/////////////////////////////////////////////////////////// \n ");
+    printf ("///       Projeto de controle de despensa doméstica     /// \n ");
+    printf ("/////////////////////////////////////////////////////////// \n ");
+    printf ("///           Auxilia no controle dos gastos            /// \n ");
+    printf ("///           Auxilia na organização doméstica          /// \n ");
+    printf ("///           Evita gastos desnecessários               /// \n ");
+    printf ("/////////////////////////////////////////////////////////// \n ");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
+void telaPrincipal (void) {
+    system("clear||cls");
+    printf("\n");
+    printf ("\n");
+    printf ("/////////////////////////////////////////////////////////// \n ");
+    printf ("///                 1. Módulo Cliente                   /// \n ");
+    printf ("///                 2. Módulo Renda                     /// \n ");
+    printf ("///                 3. Módulo Controle dos gastos       /// \n ");
+    printf ("/////////////////////////////////////////////////////////// \n ");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
+void telaCliente(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///              1. Cadastrar cliente                     /// \n");
+    printf("///              2. Encontrar cliente                     /// \n");
+    printf("///              3. Atualizar o cadastro de cliente       /// \n");
+    printf("///              4. Excluir cliente do cadastro           /// \n");
+    printf("///              0. Voltar                                /// \n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///           Escolha a opção desejada:                   /// \n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void telaCadastroCliente(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///          Nome completo:                               /// \n");
+    printf("///          E-mail:                                      /// \n");
+    printf("///          Data de Nascimento (dd/mm/aaaa):             /// \n");
+    printf("///          Celular:                                     /// \n");
+    printf("///          CPF:                                         /// \n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///           Escolha a opção desejada:                   /// \n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void telaBuscaCliente(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///                   Buscar cliente                      /// \n");
+    printf("///                                                       /// \n");
+    printf("///          CPF do cliente:                              /// \n");
+    printf("///                                                       /// \n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///           Escolha a opção desejada:                   /// \n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void telaAtualizaCliente(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///                Atualizar dados do cliente             /// \n");
+    printf("///                                                       /// \n");
+    printf("///          CPF do cliente:                              /// \n");
+    printf("///                                                       /// \n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///           Escolha a opção desejada:                   /// \n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void telaApagaCliente(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///                Apagar dados do cliente                /// \n");
+    printf("///                                                       /// \n");
+    printf("///          CPF do cliente:                              /// \n");
+    printf("///                                                       /// \n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///           Escolha a opção desejada:                   /// \n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
