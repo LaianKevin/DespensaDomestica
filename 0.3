@@ -38,6 +38,8 @@ void telaSobre (void) {
 }
 
 void telaPrincipal (void) {
+    int op;
+    
     system("clear||cls");
     printf("\n");
     printf ("\n");
@@ -46,6 +48,9 @@ void telaPrincipal (void) {
     printf ("///                 2. Módulo Renda                     /// \n ");
     printf ("///                 3. Módulo Controle dos gastos       /// \n ");
     printf ("/////////////////////////////////////////////////////////// \n ");
+    printf ("///            Escolha a opção desejada: ");
+    scanf("%d", &op);
+    getchar();
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
@@ -53,6 +58,8 @@ void telaPrincipal (void) {
 }
 
 void telaCliente(void) {
+    int op;
+    
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
@@ -62,64 +69,90 @@ void telaCliente(void) {
     printf("///              4. Excluir cliente do cadastro           /// \n");
     printf("///              0. Voltar                                /// \n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///           Escolha a opção desejada:                   /// \n");
+    printf("///           Escolha a opção desejada: ");
+    scanf("%d", &op);
+    getchar();
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
 void telaCadastroCliente(void) {
+    char nome[51];
+    char email[51];
+    int nasc[11];
+    int celular[12];
+    int cpf[12];
+    
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///          Nome completo:                               /// \n");
-    printf("///          E-mail:                                      /// \n");
-    printf("///          Data de Nascimento (dd/mm/aaaa):             /// \n");
-    printf("///          Celular:                                     /// \n");
-    printf("///          CPF:                                         /// \n");
+    printf("///          Nome completo: ");
+    scanf("%s[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+    getchar();
+    printf("///          E-mail: ");
+    scanf("%s[A-Za-z0-9@._]", email);
+    getchar();
+    printf("///          Data de Nascimento (dd/mm/aaaa): ");
+    scanf("%d[0-9/]", nasc);
+    getchar();
+    printf("///          Celular: ");
+    scanf("%d[0-9]", celular);
+    getchar();
+    printf("///          CPF: ");
+    scanf("%d[0-9]", cpf);
+    getchar();
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///           Escolha a opção desejada:                   /// \n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
 void telaBuscaCliente(void) {
+    int cpf[12];
+    
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
     printf("///                   Buscar cliente                      /// \n");
     printf("///                                                       /// \n");
-    printf("///          CPF do cliente:                              /// \n");
+    printf("///          CPF do cliente: ");
+    scanf("%d[0-9]", cpf);
+    getchar();
     printf("///                                                       /// \n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///           Escolha a opção desejada:                   /// \n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
 void telaAtualizaCliente(void) {
+    int cpf[12];
+
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
     printf("///                Atualizar dados do cliente             /// \n");
     printf("///                                                       /// \n");
-    printf("///          CPF do cliente:                              /// \n");
+    printf("///          CPF do cliente: ");
+    scanf("%d[0-9]", cpf);
+    getchar();
     printf("///                                                       /// \n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///           Escolha a opção desejada:                   /// \n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
 void telaApagaCliente(void) {
+    int cpf[12];
+
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
     printf("///                Apagar dados do cliente                /// \n");
     printf("///                                                       /// \n");
-    printf("///          CPF do cliente:                              /// \n");
+    printf("///          CPF do cliente: ");
+    scanf("%d[0-9]", cpf);
+    getchar();
     printf("///                                                       /// \n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///           Escolha a opção desejada:                   /// \n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
