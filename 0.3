@@ -3,34 +3,37 @@
 
 void telaSobre (void);
 void telaPrincipal (void);
-void telaCliente (void);
-void telaCadastroCliente(void);
-void telaBuscaCliente(void);
-void telaAtualizaCliente(void);
-void telaApagaCliente(void);
+void telaProduto (void);
+void telaCadastroProduto(void);
+void telaBuscaProduto(void);
+void telaAtualizaProduto(void);
+void telaApagaProduto(void);
+void telaEntraProduto(void);
+void telaSaidaProduto(void);
 
 int main (void) {
   telaSobre ();
   telaPrincipal ();
-  telaCliente();
-  telaCadastroCliente();
-  telaBuscaCliente();
-  telaAtualizaCliente();
-  telaApagaCliente();
+  telaProduto();
+  telaCadastroProduto();
+  telaBuscaProduto();
+  telaAtualizaProduto();
+  telaApagaProduto();
+  telaEntraProduto();
+  telaSaidaProduto();
   return 0;
 }
 
 void telaSobre (void) {
     system("clear||cls");
     printf("\n");
-    printf ("\n");
-    printf ("/////////////////////////////////////////////////////////// \n ");
-    printf ("///       Projeto de controle de despensa doméstica     /// \n ");
-    printf ("/////////////////////////////////////////////////////////// \n ");
-    printf ("///           Auxilia no controle dos gastos            /// \n ");
-    printf ("///           Auxilia na organização doméstica          /// \n ");
-    printf ("///           Evita gastos desnecessários               /// \n ");
-    printf ("/////////////////////////////////////////////////////////// \n ");
+    printf("//////////////////////////////////////////////////////////// \n");
+    printf("///       Projeto de controle de despensa doméstica      /// \n");
+    printf("//////////////////////////////////////////////////////////// \n");
+    printf("///           Auxilia no controle dos gastos             /// \n");
+    printf("///           Auxilia na organização doméstica           /// \n");
+    printf("///           Evita gastos desnecessários                /// \n");
+    printf("//////////////////////////////////////////////////////////// \n");
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
@@ -42,13 +45,12 @@ void telaPrincipal (void) {
     
     system("clear||cls");
     printf("\n");
-    printf ("\n");
-    printf ("/////////////////////////////////////////////////////////// \n ");
-    printf ("///                 1. Módulo Cliente                   /// \n ");
-    printf ("///                 2. Módulo Renda                     /// \n ");
-    printf ("///                 3. Módulo Controle dos gastos       /// \n ");
-    printf ("/////////////////////////////////////////////////////////// \n ");
-    printf ("///            Escolha a opção desejada: ");
+    printf("//////////////////////////////////////////////////////////// \n");
+    printf("///             1. Módulo Casdastro de produto           /// \n");
+    printf("///             2. Módulo entrada de produto             /// \n");
+    printf("///             3. Módulo saída de produto               /// \n");
+    printf("//////////////////////////////////////////////////////////// \n");
+    printf("///            Escolha a opção desejada: ");
     scanf("%d", &op);
     getchar();
     printf("\n");
@@ -57,16 +59,16 @@ void telaPrincipal (void) {
 
 }
 
-void telaCliente(void) {
+void telaProduto(void) {
     int op;
     
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///              1. Cadastrar cliente                     /// \n");
-    printf("///              2. Encontrar cliente                     /// \n");
-    printf("///              3. Atualizar o cadastro de cliente       /// \n");
-    printf("///              4. Excluir cliente do cadastro           /// \n");
+    printf("///              1. Cadastrar produto                     /// \n");
+    printf("///              2. Encontrar produto                     /// \n");
+    printf("///              3. Atualizar o cadastro do produto       /// \n");
+    printf("///              4. Excluir produto do cadastro           /// \n");
     printf("///              0. Voltar                                /// \n");
     printf("///////////////////////////////////////////////////////////// \n");
     printf("///           Escolha a opção desejada: ");
@@ -76,46 +78,45 @@ void telaCliente(void) {
     getchar();
 }
 
-void telaCadastroCliente(void) {
+void telaCadastroProduto(void) {
     char nome[51];
-    char email[51];
-    int nasc[11];
-    int celular[12];
-    int cpf[12];
+    char marca[51];
+    char comp[4];
+    int barras[13];
     
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///          Nome completo: ");
+    printf("///          Nome do produto: ");
     scanf("%s[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
     getchar();
-    printf("///          E-mail: ");
-    scanf("%s[A-Za-z0-9@._]", email);
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///          Marca: ");
+    scanf("%s[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", marca);
     getchar();
-    printf("///          Data de Nascimento (dd/mm/aaaa): ");
-    scanf("%d[0-9/]", nasc);
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///          Unidade do produto: ");
+    scanf("%s[A-Z]", comp);
     getchar();
-    printf("///          Celular: ");
-    scanf("%d[0-9]", celular);
-    getchar();
-    printf("///          CPF: ");
-    scanf("%d[0-9]", cpf);
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///          Código de barras: ");
+    scanf("%d[0-9]", barras);
     getchar();
     printf("///////////////////////////////////////////////////////////// \n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
-void telaBuscaCliente(void) {
-    int cpf[12];
+void telaBuscaProduto(void) {
+    int barras[13];
     
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///                   Buscar cliente                      /// \n");
+    printf("///                   Buscar Produto                      /// \n");
     printf("///                                                       /// \n");
-    printf("///          CPF do cliente: ");
-    scanf("%d[0-9]", cpf);
+    printf("///      Código de barras do produto: ");
+    scanf("%d[0-9]", barras);
     getchar();
     printf("///                                                       /// \n");
     printf("///////////////////////////////////////////////////////////// \n");
@@ -123,16 +124,16 @@ void telaBuscaCliente(void) {
     getchar();
 }
 
-void telaAtualizaCliente(void) {
-    int cpf[12];
+void telaAtualizaProduto(void) {
+    int barras[13];
 
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///                Atualizar dados do cliente             /// \n");
+    printf("///              Atualizar dados do Produto               /// \n");
     printf("///                                                       /// \n");
-    printf("///          CPF do cliente: ");
-    scanf("%d[0-9]", cpf);
+    printf("///      Código de barras do produto: ");
+    scanf("%d[0-9]", barras);
     getchar();
     printf("///                                                       /// \n");
     printf("///////////////////////////////////////////////////////////// \n");
@@ -140,18 +141,66 @@ void telaAtualizaCliente(void) {
     getchar();
 }
 
-void telaApagaCliente(void) {
-    int cpf[12];
+void telaApagaProduto(void) {
+    int barras[13];
 
     system("clear||cls");
     printf("\n");
     printf("///////////////////////////////////////////////////////////// \n");
-    printf("///                Apagar dados do cliente                /// \n");
+    printf("///                Apagar dados do Produto                /// \n");
     printf("///                                                       /// \n");
-    printf("///          CPF do cliente: ");
-    scanf("%d[0-9]", cpf);
+    printf("///      Código de barras do produto: ");
+    scanf("%d[0-9]", barras);
     getchar();
     printf("///                                                       /// \n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void telaEntraProduto(void) {
+    int quant[11];
+    int datac[11];
+    float prec[51];
+    int valid[11];
+    
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///            Entrada de produtos na despensa            /// \n");
+    printf("///                                                       /// \n");
+    printf("///           Quantidade de Produto(s): ");
+    scanf("%d[0-9]", quant);
+    getchar();
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///           Data da compra (dd/mm/aaaa): ");
+    scanf("%d[0-9/]", datac);
+    getchar();
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///           Preço unitário: ");
+    scanf("%f[0-9/]", prec);
+    getchar();
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///           Validade: ");
+    scanf("%d[0-9/]", valid);
+    getchar();
+    printf("///////////////////////////////////////////////////////////// \n");
+    getchar();
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void telaSaidaProduto(void) {
+    int barras[13];
+
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////// \n");
+    printf("///            Saida de produtos da despensa              /// \n");
+    printf("///                                                       /// \n");
+    printf("///          Codigo de barras do produto usado: ");
+    scanf("%d[0-9]", barras);
+    getchar();
     printf("///////////////////////////////////////////////////////////// \n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
