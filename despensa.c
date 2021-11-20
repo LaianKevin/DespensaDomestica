@@ -2,8 +2,9 @@
 #include <stdlib.h>
 
 void telaSobre (void);
-void telaPrincipal (void);
-void telaProduto (void);
+int telaPrincipal (void);
+int menuProduto(void);
+int telaProduto (void);
 void telaCadastroProduto(void);
 void telaBuscaProduto(void);
 void telaAtualizaProduto(void);
@@ -12,15 +13,23 @@ void telaEntraProduto(void);
 void telaSaidaProduto(void);
 
 int main (void) {
-  telaSobre ();
-  telaPrincipal ();
-  telaProduto();
-  telaCadastroProduto();
-  telaBuscaProduto();
-  telaAtualizaProduto();
-  telaApagaProduto();
-  telaEntraProduto();
-  telaSaidaProduto();
+    int op;
+  do {
+    op = telaPrincipal();
+    switch (op) {
+      case 1:   menuProduto();
+                break;
+      case 2:   telaEntraProduto();
+                break;
+      case 3:   telaSaidaProduto();
+                break;          
+      case 4:   telaSobre();
+                break;
+      case 0:   break;
+      default: printf("Opção inválida!\n");
+    }
+  } while (op != 0);
+  printf("Fim do programa!\n");
   return 0;
 }
 
@@ -35,20 +44,24 @@ void telaSobre (void) {
     printf("///           Evita gastos desnecessários                /// \n");
     printf("//////////////////////////////////////////////////////////// \n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf("\t\t\t>>> Tecle <ENTER> para retornar ao menu principal...\n");
     getchar();
 
 }
 
-void telaPrincipal (void) {
+int telaPrincipal (void) {
     int op;
     
     system("clear||cls");
     printf("\n");
     printf("//////////////////////////////////////////////////////////// \n");
+    printf("///                   Menu principal                     /// \n");
+    printf("///                                                      /// \n");
     printf("///             1. Módulo Casdastro de produto           /// \n");
     printf("///             2. Módulo entrada de produto             /// \n");
     printf("///             3. Módulo saída de produto               /// \n");
+    printf("///             4. Sobre o projeto                       /// \n");
+    printf("///             0. Sair                                  /// \n");
     printf("//////////////////////////////////////////////////////////// \n");
     printf("///            Escolha a opção desejada: ");
     scanf("%d", &op);
@@ -56,10 +69,31 @@ void telaPrincipal (void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
-
+    return op;
 }
 
-void telaProduto(void) {
+
+int menuProduto (void) {
+    int op;
+  do {
+    op = telaProduto();
+    switch (op) {
+      case 1:   telaCadastroProduto();
+                break;
+      case 2:   telaBuscaProduto();
+                break;
+      case 3:   telaAtualizaProduto();
+                break;          
+      case 4:   telaApagaProduto();
+                break;
+      case 0:   break;
+      default: printf("Opção inválida!\n");
+    }
+  } while (op != 0);
+  return 0;
+}
+
+int telaProduto(void) {
     int op;
     
     system("clear||cls");
@@ -76,6 +110,7 @@ void telaProduto(void) {
     getchar();
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 void telaCadastroProduto(void) {
@@ -183,7 +218,6 @@ void telaEntraProduto(void) {
     printf("///////////////////////////////////////////////////////////// \n");
     printf("///           Validade: ");
     scanf("%d[0-9/]", valid);
-    getchar();
     printf("///////////////////////////////////////////////////////////// \n");
     getchar();
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
@@ -205,4 +239,3 @@ void telaSaidaProduto(void) {
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
-
