@@ -1,1 +1,1 @@
-# Despensa-dom-stica
+Programa não funcional
